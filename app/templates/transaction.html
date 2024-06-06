@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <section>
+        <h1>Make a Transaction</h1>
+        <form method="post">
+            {% csrf_token %}
+            <label for="transaction_type" aria-label="Transaction Type">Transaction Type:</label>
+            <select id="transaction_type" name="transaction_type" aria-label="Transaction Type">
+                <option value="Deposit">Deposit</option>
+                <option value="Saving">Saving</option>
+                <option value="Withdrawal">Withdrawal</option>
+            </select>
+            <label for="amount" aria-label="Amount">Amount:</label>
+            <input type="number" id="amount" name="amount" aria-label="Amount">
+            <button class="btn btn-primary" type="submit" aria-label="Submit Transaction">Submit</button>
+        </form>
+    </section>
+{% endblock %}

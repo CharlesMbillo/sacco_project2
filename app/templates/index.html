@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <section>
+        <h1>Welcome to Sacco Project</h1>
+        <p>Here you can manage your transactions.</p>
+        <button class="btn btn-primary" aria-label="Make a Transaction" onclick="location.href='{% url 'transaction' %}';">Make a Transaction</button>
+    </section>
+{% endblock %}
